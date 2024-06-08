@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Responsive Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo" alt="Starbucks Logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="index.html">What's New</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just coffee<br>It's <span>Starbucks</span></h2>
+                <p>Starting January 3, 2024, customers will be able to use their own clean, 
+                personal cup for every visit at all company-operated stores and participating licensed stores in the U.S.
+                and Canada - including drive-thru, the Starbucks app, and in café. 
+                Starbucks is the only national coffeehouse in the U.S. to offer customers 
+                the option to use their personal cup when they make a mobile order and the first in Canada to offer mobile order for all drinks and sizes.  
+                This milestone achieves the goal set in 2022 to make it easier for customers to use reusable cups and help Starbucks reduce cup waste sent to landfill.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks" alt="Starbucks Coffee">
+            </div>
+            <ul class="thumb">
+                <li><img src="thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')" alt="Thumb 1"></li>
+                <li><img src="thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')" alt="Thumb 2"></li>
+                <li><img src="thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')" alt="Thumb 3"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://x.com/?lang=en-in"><img src="twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
